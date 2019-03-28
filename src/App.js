@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import RandomPlanet from './components/RandomPlanet'
 import PlanetList from './components/PlanetList'
 import PlanetDetail from './components/PlanetDetail'
 import Welcome from './components/Welcome'
+import NotFound from './components/NotFound'
 
 class App extends Component {
 
@@ -47,6 +48,9 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <main>
+          <Switch>
+         
+        
 
             <Route exact path="/" render={() => <Welcome />} />
 
@@ -75,8 +79,11 @@ class App extends Component {
                 />
               </div>
             } />
+             <Route component={NotFound} />
+            </Switch>
           </main>
         </div>
+       
 
       </BrowserRouter>
     );
