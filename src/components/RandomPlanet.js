@@ -6,7 +6,9 @@ function RandomPlanet(props) {
     }
     return (
         <div className="random">
-            {props.randomPlanet}
+            <p>Name: {props.randomPlanet.name}</p>
+            <p>Color: {props.randomPlanet.color}</p>
+            <p> Number of Moons: {props.randomPlanet.num_moons}</p>
             <button onClick={onClick}>Random Planet</button>
         </div>
     )
